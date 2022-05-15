@@ -21,8 +21,8 @@ void SortBIN(char* fname, const int N) {
       Student prev = FileHelper::fRead<Student>(f, j+1);
 
       if (getCondition(
-        current.physics, current.rank, current.lastName,
-        prev.physics, prev.rank, prev.lastName
+        prev.physics, prev.rank, prev.lastName,
+        current.physics, current.rank, current.lastName
       )) FileHelper::fChange<Student>(f, j, j+1);
     }
 

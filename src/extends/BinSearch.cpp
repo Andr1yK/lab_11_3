@@ -25,8 +25,8 @@ int BinSearch(
       return mid;
 
     if (getCondition(
-      physics, rank, lastName,
-      student.physics, student.rank, student.lastName
+      student.physics, student.rank, student.lastName,
+      physics, rank, lastName
     ))
       left = mid + 1;
     else

@@ -25,8 +25,8 @@ void IndexSortBIN(char* fname, char* fname_res, const int N) {
       Student prev = FileHelper::fRead<Student>(f, sorted[j]);
 
       if(getCondition(
-          prev.physics, prev.rank, prev.lastName,
-          current.physics, current.rank, current.lastName
+          current.physics, current.rank, current.lastName,
+          prev.physics, prev.rank, prev.lastName
       )) sorted[j + 1] = sorted[j];
       else break;
     }

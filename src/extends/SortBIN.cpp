@@ -12,9 +12,6 @@
 void SortBIN(char* fname, const int N) {
   fstream f(fname, ios::binary | ios::in | ios::out);
 
-  f.seekg(0, ios::end);
-
-  f.seekg(0, ios::beg);
   for (int i = 1; i<N; i++)
     for (int j = 0; j<N-i; j++) {
       Student current = FileHelper::fRead<Student>(f, j);
